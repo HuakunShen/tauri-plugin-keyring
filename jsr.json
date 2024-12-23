@@ -1,0 +1,6 @@
+{
+  "name": "@hk/tauri-plugin-keyring-api",
+  "version": "0.1.1",
+  "license": "MIT",
+  "exports": "./guest-js/index.ts"
+}

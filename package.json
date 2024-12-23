@@ -1,6 +1,6 @@
 {
   "name": "tauri-plugin-keyring-api",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Huakun Shen",
   "description": "",
   "type": "module",
