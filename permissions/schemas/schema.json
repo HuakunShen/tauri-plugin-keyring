@@ -295,6 +295,51 @@
       "type": "string",
       "oneOf": [
         {
+          "description": "Default permissions for the plugin",
+          "type": "string",
+          "const": "default"
+        },
+        {
+          "description": "Enables the delete_password command without any pre-configured scope.",
+          "type": "string",
+          "const": "allow-delete-password"
+        },
+        {
+          "description": "Denies the delete_password command without any pre-configured scope.",
+          "type": "string",
+          "const": "deny-delete-password"
+        },
+        {
+          "description": "Enables the delete_secret command without any pre-configured scope.",
+          "type": "string",
+          "const": "allow-delete-secret"
+        },
+        {
+          "description": "Denies the delete_secret command without any pre-configured scope.",
+          "type": "string",
+          "const": "deny-delete-secret"
+        },
+        {
+          "description": "Enables the get_password command without any pre-configured scope.",
+          "type": "string",
+          "const": "allow-get-password"
+        },
+        {
+          "description": "Denies the get_password command without any pre-configured scope.",
+          "type": "string",
+          "const": "deny-get-password"
+        },
+        {
+          "description": "Enables the get_secret command without any pre-configured scope.",
+          "type": "string",
+          "const": "allow-get-secret"
+        },
+        {
+          "description": "Denies the get_secret command without any pre-configured scope.",
+          "type": "string",
+          "const": "deny-get-secret"
+        },
+        {
           "description": "Enables the ping command without any pre-configured scope.",
           "type": "string",
           "const": "allow-ping"
@@ -305,9 +350,24 @@
           "const": "deny-ping"
         },
         {
-          "description": "Default permissions for the plugin",
+          "description": "Enables the set_password command without any pre-configured scope.",
           "type": "string",
-          "const": "default"
+          "const": "allow-set-password"
+        },
+        {
+          "description": "Denies the set_password command without any pre-configured scope.",
+          "type": "string",
+          "const": "deny-set-password"
+        },
+        {
+          "description": "Enables the set_secret command without any pre-configured scope.",
+          "type": "string",
+          "const": "allow-set-secret"
+        },
+        {
+          "description": "Denies the set_secret command without any pre-configured scope.",
+          "type": "string",
+          "const": "deny-set-secret"
         }
       ]
     }

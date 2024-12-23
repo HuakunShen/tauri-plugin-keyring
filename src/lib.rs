@@ -1,6 +1,6 @@
 use tauri::{
-  plugin::{Builder, TauriPlugin},
-  Manager, Runtime,
+    plugin::{Builder, TauriPlugin},
+    Manager, Runtime,
 };
 
 pub use models::*;
@@ -23,26 +23,33 @@ use mobile::Keyring;
 
 /// Extensions to [`tauri::App`], [`tauri::AppHandle`] and [`tauri::Window`] to access the keyring APIs.
 pub trait KeyringExt<R: Runtime> {
-  fn keyring(&self) -> &Keyring<R>;
+    fn keyring(&self) -> &Keyring<R>;
 }
 
 impl<R: Runtime, T: Manager<R>> crate::KeyringExt<R> for T {
-  fn keyring(&self) -> &Keyring<R> {
-    self.state::<Keyring<R>>().inner()
-  }
+    fn keyring(&self) -> &Keyring<R> {
+        self.state::<Keyring<R>>().inner()
+    }
 }
 
 /// Initializes the plugin.
 pub fn init<R: Runtime>() -> TauriPlugin<R> {
-  Builder::new("keyring")
-    .invoke_handler(tauri::generate_handler![commands::ping])
-    .setup(|app, api| {
-      #[cfg(mobile)]
-      let keyring = mobile::init(app, api)?;
-      #[cfg(desktop)]
-      let keyring = desktop::init(app, api)?;
-      app.manage(keyring);
-      Ok(())
-    })
-    .build()
+    Builder::new("keyring")
+        .invoke_handler(tauri::generate_handler![
+            commands::get_password,
+            commands::set_password,
+            commands::delete_password,
+            commands::get_secret,
+            commands::set_secret,
+            commands::delete_secret,
+        ])
+        .setup(|app, api| {
+            // #[cfg(mobile)]
+            // let keyring = mobile::init(app, api)?;
+            #[cfg(desktop)]
+            let keyring = desktop::init(app, api)?;
+            app.manage(keyring);
+            Ok(())
+        })
+        .build()
 }

@@ -10,13 +10,21 @@
     "tauri": "tauri"
   },
   "dependencies": {
-    "@tauri-apps/api": "^2.0.0-alpha.11",
+    "@tauri-apps/api": "^2.1.1",
+    "svelte-sonner": "^0.3.28",
     "tauri-plugin-keyring-api": "file:../../"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.1",
-    "svelte": "^3.49.0",
-    "vite": "^3.0.2",
-    "@tauri-apps/cli": "^2.0.0-alpha.17"
+    "@sveltejs/vite-plugin-svelte": "^5.0.2",
+    "@tauri-apps/cli": "^2.1.0",
+    "@tsconfig/svelte": "^5.0.4",
+    "autoprefixer": "^10.4.20",
+    "daisyui": "^4.12.22",
+    "svelte": "^5.14.3",
+    "svelte-check": "^4.1.1",
+    "tailwindcss": "^3.4.9",
+    "tslib": "^2.8.1",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.3"
   }
 }

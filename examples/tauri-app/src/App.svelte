@@ -1,54 +1,21 @@
 <script>
-  import Greet from './lib/Greet.svelte'
-  import { ping } from 'tauri-plugin-keyring-api'
+  import "./app.css";
+  import { Toaster, toast } from "svelte-sonner";
+  import Password from "./lib/components/password.svelte";
+  import Secret from "./lib/components/secret.svelte";
 
-	let response = ''
-
-	function updateResponse(returnValue) {
-		response += `[${new Date().toLocaleTimeString()}] ` + (typeof returnValue === 'string' ? returnValue : JSON.stringify(returnValue)) + '<br>'
-	}
-
-	function _ping() {
-		ping("Pong!").then(updateResponse).catch(updateResponse)
-	}
+  let service = $state("tauri-plugin-keyring");
+  let user = $state("test");
+  let password = $state("");
+  let passwordRead = $state("");
+  let secret = $state("");
+  let secretRead = $state("");
 </script>
 
-<main class="container">
-  <h1>Welcome to Tauri!</h1>
-
-  <div class="row">
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo vite" alt="Vite Logo" />
-    </a>
-    <a href="https://tauri.app" target="_blank">
-      <img src="/tauri.svg" class="logo tauri" alt="Tauri Logo" />
-    </a>
-    <a href="https://svelte.dev" target="_blank">
-      <img src="/svelte.svg" class="logo svelte" alt="Svelte Logo" />
-    </a>
+<Toaster richColors />
+<main class="container mx-auto space-y-2">
+  <div class="grid grid-cols-2 gap-4">
+    <Password />
+    <Secret />
   </div>
-
-  <p>
-    Click on the Tauri, Vite, and Svelte logos to learn more.
-  </p>
-
-  <div class="row">
-    <Greet />
-  </div>
-
-  <div>
-    <button on:click="{_ping}">Ping</button>
-    <div>{@html response}</div>
-  </div>
-
 </main>
-
-<style>
-  .logo.vite:hover {
-    filter: drop-shadow(0 0 2em #747bff);
-  }
-
-  .logo.svelte:hover {
-    filter: drop-shadow(0 0 2em #ff3e00);
-  }
-</style>
