@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       '@tauri-apps/api':
-        specifier: '>=2.0.0-beta.6'
+        specifier: '>=2.1.1'
         version: 2.1.1
     devDependencies:
       '@rollup/plugin-typescript':

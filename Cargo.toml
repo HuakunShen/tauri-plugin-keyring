@@ -1,8 +1,9 @@
 [package]
 name = "tauri-plugin-keyring"
 version = "0.1.0"
-authors = [ "You" ]
-description = ""
+authors = [ "Huakun Shen" ]
+description = "A tauri plugin wrapper for the keyring crate"
+license = "MIT"
 edition = "2021"
 rust-version = "1.77.2"
 exclude = ["/examples", "/webview-dist", "/webview-src", "/node_modules"]
