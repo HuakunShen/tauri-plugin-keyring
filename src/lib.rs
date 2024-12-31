@@ -42,6 +42,8 @@ pub fn init<R: Runtime>() -> TauriPlugin<R> {
             commands::get_secret,
             commands::set_secret,
             commands::delete_secret,
+            commands::get_or_set_password,
+            commands::get_or_set_secret,
         ])
         .setup(|app, api| {
             // #[cfg(mobile)]

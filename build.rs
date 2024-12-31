@@ -5,6 +5,8 @@ const COMMANDS: &[&str] = &[
     "get_secret",
     "set_secret",
     "delete_secret",
+    "get_or_set_password",
+    "get_or_set_secret",
 ];
 
 fn main() {

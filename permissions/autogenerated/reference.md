@@ -1,13 +1,3 @@
-## Default Permission
-
-Default permissions for the plugin
-
-- `allow-get-password`
-- `allow-set-password`
-- `allow-delete-password`
-- `allow-get-secret`
-- `allow-set-secret`
-- `allow-delete-secret`
 
 ## Permission Table
 
@@ -73,6 +63,58 @@ Denies the delete_secret command without any pre-configured scope.
 <tr>
 <td>
 
+`keyring:allow-get-or-set-password`
+
+</td>
+<td>
+
+Enables the get_or_set_password command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`keyring:deny-get-or-set-password`
+
+</td>
+<td>
+
+Denies the get_or_set_password command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`keyring:allow-get-or-set-secret`
+
+</td>
+<td>
+
+Enables the get_or_set_secret command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`keyring:deny-get-or-set-secret`
+
+</td>
+<td>
+
+Denies the get_or_set_secret command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
 `keyring:allow-get-password`
 
 </td>
@@ -118,32 +160,6 @@ Enables the get_secret command without any pre-configured scope.
 <td>
 
 Denies the get_secret command without any pre-configured scope.
-
-</td>
-</tr>
-
-<tr>
-<td>
-
-`keyring:allow-ping`
-
-</td>
-<td>
-
-Enables the ping command without any pre-configured scope.
-
-</td>
-</tr>
-
-<tr>
-<td>
-
-`keyring:deny-ping`
-
-</td>
-<td>
-
-Denies the ping command without any pre-configured scope.
 
 </td>
 </tr>

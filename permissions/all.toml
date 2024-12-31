@@ -7,4 +7,6 @@ permissions = [
     "allow-get-secret",
     "allow-set-secret",
     "allow-delete-secret",
+    "allow-get-or-set-password",
+    "allow-get-or-set-secret",
 ]
